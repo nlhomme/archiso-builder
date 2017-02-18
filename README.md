@@ -4,7 +4,7 @@ Build your own Arch Linux ISO made with 'archiso' very simply using Docker
 See what archiso is in the [ArchLinux wiki](https://wiki.archlinux.org/index.php/archiso)
 
 ## How to use?
-At firt, push your archiso files to any SCM using git (Github, Bitbucket, Gitlab, etc...),
+At fisrt, push your archiso files to any SCM using git (Github, Bitbucket, Gitlab, etc...),
 an example is avaiable [here](https://github.com/nlhomme/lhoslite)
 
 To build the image, run:
