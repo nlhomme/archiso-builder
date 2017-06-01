@@ -4,7 +4,7 @@
 # TO_RUN           : docker run --rm -v /tmp:/tmp -t -i --privileged nlhomme/archiso-builder:latest 
 ##
 
-FROM finalduty/archlinux:latest
+FROM greyltc/archlinux:latest
 #MAINTAINER nlhomme (https://github.com/nlhomme/archiso-builder)
 
 #Install git and archiso
