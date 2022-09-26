@@ -1,11 +1,14 @@
 ##
 # NAME             : nlhomme/archiso-builder
 # TO_BUILD         : docker build --rm -t nlhomme/archiso-builder:latest .
-# TO_RUN           : docker run --rm -v /tmp:/tmp -t -i --privileged nlhomme/archiso-builder:latest 
+# TO_RUN           : docker run --rm -v /tmp:/tmp -t -i --privileged nlhomme/archiso-builder:latest
 ##
 
-FROM finalduty/archlinux:latest
+FROM library/archlinux:latest
 #MAINTAINER nlhomme (https://github.com/nlhomme/archiso-builder)
+
+#Sync packages databases
+RUN pacman -Sy
 
 #Install git and archiso
 RUN pacman -S git archiso --noconfirm
