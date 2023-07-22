@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  pacoloco:
+    container_name: pacoloco
+    image: ghcr.io/anatol/pacoloco
+    volumes:
+      - ./pacoloco/cache:/var/cache/pacoloco
+      - ./pacoloco/pacoloco.yaml:/etc/pacoloco.yaml
+    networks:
+      - pacnet
+
+  builder:
+    build: ./builder
+    image: archiso-builder
+    privileged: true
+    networks:
+      - pacnet
+    depends_on:
+      - pacoloco
+
+networks:
+  pacnet:

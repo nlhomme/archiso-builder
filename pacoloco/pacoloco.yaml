@@ -1,0 +1,9 @@
+port: 9129
+cache_dir: /var/cache/pacoloco
+purge_files_after: 0 # 360000 seconds or 100 hours, 0 to disable
+download_timeout: 3600 # download will timeout after 3600 seconds
+repos:
+  archlinux:
+    urls:
+      - https://mirror.osbeck.com/archlinux
+      - https://mirror.lty.me/archlinux
