@@ -25,5 +25,5 @@ One the ISO build is done, go on the /tmp folder on your host system and find th
 
 ## Known issues
 
-* The arm64 platform is currently not supported
+* The arm64 platform is not supported
 * This image because will not work if the live cd you're going to build if bigger than the limit of 10gb per Docker container
