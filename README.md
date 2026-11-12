@@ -12,12 +12,6 @@ To build the image, run:
 
     docker build --rm -t nlhomme/archiso-builder:latest .
 
-You can also pull the latest image available by running:
-
-    docker pull nlhomme/archiso-builder
-
-Note: A new image is automatically pushed to Docker Hub at each Github commit.
-
 Run the container with the command below, the ISO building will start automatically:
 
     docker run --rm -v /tmp:/tmp -t -i --privileged nlhomme/archiso-builder:latest
