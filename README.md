@@ -28,4 +28,7 @@ One the ISO build is done, go on the /tmp folder on your host system and find th
 
     iso-name.iso
 
-#NOTE: this image because will not work if the live cd you're going to build if bigger than the limit of 10gb per Docker container. I'll will work on it soon....
+## Known issues
+
+* The arm64 platform is currently not supported
+* This image because will not work if the live cd you're going to build if bigger than the limit of 10gb per Docker container
