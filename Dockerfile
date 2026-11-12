@@ -4,14 +4,11 @@
 # TO_RUN           : docker run --rm -v /tmp:/tmp -t -i --privileged nlhomme/archiso-builder:latest
 ##
 
-FROM library/archlinux:latest
+FROM archlinux:base
 #MAINTAINER nlhomme (https://github.com/nlhomme/archiso-builder)
 
-#Sync packages databases
-RUN pacman -Sy
-
-#Install git and archiso
-RUN pacman -S git archiso --noconfirm
+#Sync packages databases then install git and archiso
+RUN pacman -Syu --noconfirm git archiso
 
 #Copy the build script and allow him to be executed
 COPY files/buildscript.sh root/
@@ -20,4 +17,3 @@ COPY files/buildscript.sh root/
 RUN ["chmod", "+x", "root/buildscript.sh"]
 
 ENTRYPOINT ["./root/buildscript.sh"]
-
